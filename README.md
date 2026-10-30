@@ -1,5 +1,7 @@
 # Feiwen Xiao 个人网站
 
+© 2026 Feiwen Xiao. All rights reserved. Content and photos may not be reused without permission.
+
 纯静态网站，不需要安装任何依赖，任何能放静态文件的地方都能部署。
 
 ## 文件说明
