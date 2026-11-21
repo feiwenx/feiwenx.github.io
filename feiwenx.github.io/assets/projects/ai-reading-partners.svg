@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Illustration: a tablet showing an interactive e-book, with two speech bubbles in different colors">
+  <defs>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="2.6" fill="#1d2125" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="#e2f5ee"/>
+  <rect width="1200" height="900" fill="url(#dots)"/>
+
+  <!-- tablet -->
+  <rect x="318" y="288" width="600" height="470" rx="44" fill="#1d2125" fill-opacity="0.16"/>
+  <rect x="300" y="270" width="600" height="470" rx="44" fill="#1d2125"/>
+  <rect x="332" y="302" width="536" height="406" rx="22" fill="#ffffff"/>
+  <circle cx="316" cy="505" r="6" fill="#5b6168"/>
+
+  <!-- left page: picture + text -->
+  <rect x="356" y="326" width="236" height="244" rx="14" fill="#cfe6fb" stroke="#1d2125" stroke-width="5"/>
+  <circle cx="532" cy="378" r="28" fill="#ffd43b" stroke="#1d2125" stroke-width="5"/>
+  <path d="M359 567 L359 520 Q 420 448 488 512 Q 534 470 589 530 L589 567 Z" fill="#59c9a5" stroke="#1d2125" stroke-width="5" stroke-linejoin="round"/>
+  <g stroke="#c4cad1" stroke-width="10" stroke-linecap="round">
+    <path d="M364 610h210M364 646h170M364 682h196"/>
+    <path d="M626 338h214M626 374h180M626 410h206M626 446h150M626 482h196M626 518h120"/>
+  </g>
+  <rect x="626" y="562" width="92" height="22" rx="6" fill="#fcecab"/>
+  <path d="M636 573h72" stroke="#c4cad1" stroke-width="10" stroke-linecap="round"/>
+  <!-- microphone button -->
+  <circle cx="806" cy="644" r="36" fill="#058cf2" stroke="#1d2125" stroke-width="5"/>
+  <rect x="796" y="620" width="20" height="34" rx="10" fill="#ffffff"/>
+  <path d="M786 644a20 20 0 0 0 40 0M806 664v10" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- speech bubbles -->
+  <g stroke="#1d2125" stroke-width="6" stroke-linejoin="round">
+    <path d="M190 112H410A40 40 0 0 1 450 152V214A40 40 0 0 1 410 254H360L384 304L300 254H190A40 40 0 0 1 150 214V152A40 40 0 0 1 190 112Z" fill="#1d2125" fill-opacity="0.14" stroke="none" transform="translate(10 10)"/>
+    <path d="M190 112H410A40 40 0 0 1 450 152V214A40 40 0 0 1 410 254H360L384 304L300 254H190A40 40 0 0 1 150 214V152A40 40 0 0 1 190 112Z" fill="#058cf2"/>
+    <path d="M830 96H1030A40 40 0 0 1 1070 136V192A40 40 0 0 1 1030 232H930L852 282L868 232H830A40 40 0 0 1 790 192V136A40 40 0 0 1 830 96Z" fill="#1d2125" fill-opacity="0.14" stroke="none" transform="translate(10 10)"/>
+    <path d="M830 96H1030A40 40 0 0 1 1070 136V192A40 40 0 0 1 1030 232H930L852 282L868 232H830A40 40 0 0 1 790 192V136A40 40 0 0 1 830 96Z" fill="#ffd43b"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="12" stroke-linecap="round">
+    <path d="M196 162h150M196 204h208"/>
+  </g>
+  <g stroke="#1d2125" stroke-width="12" stroke-linecap="round" stroke-opacity="0.75">
+    <path d="M836 146h176M836 186h118"/>
+  </g>
+
+  <!-- sparkles -->
+  <path d="M1006 470l10 26 26 10-26 10-10 26-10-26-26-10 26-10z" fill="#ff8a65" stroke="#1d2125" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M196 560l8 20 20 8-20 8-8 20-8-20-20-8 20-8z" fill="#058cf2"/>
+</svg>
