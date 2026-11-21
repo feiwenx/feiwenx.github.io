@@ -46,6 +46,7 @@ python3 -m http.server 8080
 - **换项目图片**：现在的项目配图是 `assets/projects/` 里的插画（`.svg`）。换成照片时，把照片（4:3，约 1200 × 900 像素）上传到 `assets/projects/`，再把 `research.html` 和 `projects/` 里对应页面中的图片路径改成新文件名（两处都要改），详情页里的 `alt` 也改成对图片的简短描述。
 - **改项目内容**：直接编辑 `projects/` 里对应的页面。Highlights 和 Findings 每条是一个 `<li> … </li>`，Selected Publications 的格式和首页论文列表一样。
 - **加一个项目**：复制 `projects/` 里任意一个页面改名、改内容；在 `research.html` 里复制一整段 `<article> … </article>`，改链接、图片和简介；最后更新相邻项目页面底部的 Previous / Next 链接。
+- **Email 按钮**：点了会把邮箱地址复制到剪贴板，并在页面底部提示 "Email copied"，不依赖访客电脑上有没有设置邮件程序。要换邮箱，改 `index.html` 里 Email 按钮的 `data-copy-email` 和 `href`，以及置顶公告里的地址。
 - **换头像**：用同名文件覆盖 `assets/portrait-photo.jpg`。
 - **置顶公告**：改 `index.html` 里 `class="note"` 那段文字；不需要的话把整个 `<div class="note">…</div>` 删掉。
 - **公告框改成黄色**：在 `styles.css` 最上面把 `--callout-bg` 改成 `#fcecab`，`--callout-border` 改成 `#e2bd3c`。
