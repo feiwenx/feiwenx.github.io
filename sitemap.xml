@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- List of pages for search engines. When you add a page, add a <url> block for it. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://feiwenx.github.io/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://feiwenx.github.io/research.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://feiwenx.github.io/projects/elementary-ai-literacy.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://feiwenx.github.io/projects/ai-literacy-books.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://feiwenx.github.io/projects/ai-reading-partners.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://feiwenx.github.io/projects/robot-learning-companions.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+</urlset>

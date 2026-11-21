@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://feiwenx.github.io/sitemap.xml

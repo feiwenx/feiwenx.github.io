@@ -55,6 +55,18 @@ python3 -m http.server 8080
 - **鼠标悬停时的浅色渐变**：带 `class="zone"` 的区块会在鼠标移上去时从窗口边缘泛出很浅的颜色。`zone` 是从左边泛蓝，`zone-right` 和 `zone-warm` 是从右边泛暖黄；相邻区块交替用 `zone` 和 `zone-right`，所以蓝色和黄色会轮流出现。颜色在 `styles.css` 最上面的 `--glow-blue` 和 `--glow-warm` 里改；想整体关掉，删掉 `styles.css` 里 `.zone:hover::before` 那一条。
 - **更新日期**：改每个页面底部的 `Last updated`，项目页还有一行 `Updated`。
 
+## 让 Google 搜到网站
+
+网站里已经放好了 `sitemap.xml`（页面清单）和 `robots.txt`（允许搜索引擎收录），首页也写好了标题和"这是谁的主页"的结构化信息。还需要在 Google 那边做一次登记：
+
+1. 打开 [Google Search Console](https://search.google.com/search-console)，用任意 Google 账号登录，选 **网址前缀（URL prefix）**，填 `https://feiwenx.github.io/`。
+2. 验证方式选 **HTML 文件**：下载 Google 给的 `google……html` 文件，原样上传到仓库最外层，等一两分钟后回到 Search Console 点 **验证**。这个文件以后不要删。
+3. 左侧 **站点地图（Sitemaps）** 里填 `sitemap.xml`，点提交。
+4. 顶部 **网址检查** 里输入 `https://feiwenx.github.io/`，点 **请求编入索引**。
+5. 在 Google Scholar、ORCID、GitHub 个人资料、LinkedIn 等地方填上网址，外部链接越多，Google 越快发现网站。
+
+一般几天到两三周会被收录，可以在 Google 搜 `site:feiwenx.github.io` 查看。以后新增页面时，记得在 `sitemap.xml` 里加一条。
+
 ## 绑定自己的域名（可选）
 
 在仓库 **Settings** → **Pages** → **Custom domain** 填入域名，再按 GitHub 给出的提示到域名服务商那里添加 DNS 记录。
