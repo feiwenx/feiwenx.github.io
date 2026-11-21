@@ -49,6 +49,25 @@
 .detail > p,.detail section > p{max-width:760px;margin:14px 0}
 .summer-figure{max-width:540px}
 .learning-path strong{line-height:1.5}
+
+    .wrap { max-width:1040px; }
+    .detail > p {max-width:760px}
+    .detail section > .story-row {display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,44px);max-width:none;align-items:center;margin:30px 0 44px}
+    .story-row .story-figure {margin:0;max-width:none;min-width:0}
+    .story-row img {width:100%;height:auto;border-radius:10px}
+    .story-copy {min-width:0;font-size:16px;line-height:1.8}
+    .story-copy p {margin:0}
+    .story-copy p+p {margin-top:18px}
+    .story-row figcaption {font-size:12.5px;line-height:1.6;margin-top:10px}
+    .story-row-second {padding-top:28px;border-top:1px solid var(--line)}
+    .detail h2 {text-wrap:balance}
+    @media(max-width:700px){
+      .detail section > .story-row {grid-template-columns:1fr;gap:20px;margin:24px 0 36px}
+      .story-row-first .story-copy {grid-row:1}
+    }
+
+.learning-path .cycle-title {display:block;margin:0 0 10px;color:var(--accent-text);font-size:17px;line-height:1.4;font-weight:700;white-space:nowrap}
+.learning-path strong {font-size:16px}
 </style>
 </head>
 <body>
@@ -63,19 +82,23 @@
 <p>Through a research–practice partnership with a rural North Carolina school district, Elementary AI integrates AI literacy into elementary classrooms, including English Language Arts, Mathematics and Science. Working with teachers, we design learning experiences that position children as creators who can question, test, and shape AI through familiar toys and classroom activities. At the same time, we aim to use children’s curiosity and interests in AI to improve their disciplinary learning interests and outcomes.</p>
 <section class="zone ">
 <h2>ToyTalk: Empowering Children to Design AI Characters Through Familiar Toys</h2>
-<p>What if children could decide what their own toys become with AI? The ToyTalk platform explores this question by inviting children to design AI characters based on familiar toys, then investigate their behavior through conversation. It connects AI concepts with reading, writing, and storytelling, giving children opportunities to describe characters, articulate expectations, and evaluate responses.</p>
+<div class="story-row story-row-first">
 <figure class="story-figure"><img src="../assets/projects/toytalk-classroom-activity.jpg" width="1756" height="895" alt="A child using ToyTalk with their face covered by a smiley sticker"><figcaption>Exploring what a familiar toy could become with AI during a classroom activity.</figcaption></figure>
-<p>Using the <a class="link" href="https://toytalk.org/">ToyTalk no-code platform</a>, children define their characters’ purpose, personality, knowledge, and rules, then interact with them through text or speech. They can revisit their settings to explore how changes to their designs shape the characters’ responses.</p>
+<div class="story-copy"><p>What if children could decide what their own toys become with AI? The ToyTalk platform explores this question by inviting children to design AI characters based on familiar toys, then investigate their behavior through conversation. It connects AI concepts with reading, writing, and storytelling, giving children opportunities to describe characters, articulate expectations, and evaluate responses.</p></div>
+</div>
+<div class="story-row story-row-second">
+<div class="story-copy"><p>Using the <a class="link" href="https://toytalk.org/">ToyTalk no-code platform</a>, children define their characters’ purpose, personality, knowledge, and rules, then interact with them through text or speech. They can revisit their settings to explore how changes to their designs shape the characters’ responses.</p>
 <p>ToyTalk has been integrated into elementary English Language Arts (ELA) instruction through a summer reading improvement program at five school sites. This work is part of a broader district partnership spanning five elementary schools and more than 300 students.</p>
+<p><a class="link" href="https://www.youtube.com/watch?v=UlSPjlh7KfU">Explore news ↗</a></p></div>
 <figure class="story-figure summer-figure"><img loading="lazy" src="../assets/projects/toytalk-summer-camp.jpg" width="762" height="382" alt="ToyTalk Elementary AI Summer Camp 2026 and participating school logos"><figcaption>ToyTalk Elementary AI Summer Camp · Summer 2026</figcaption></figure>
-<p><a class="link" href="https://www.youtube.com/watch?v=UlSPjlh7KfU">Explore news ↗</a></p>
+</div>
 <h3>How ToyTalk Works</h3>
 <p class="project-links"><a class="link" href="https://toytalk.org/">Explore ToyTalk ↗</a></p>
 <figure class="story-figure"><img loading="lazy" src="../assets/projects/toytalk-chat-interface.png" width="1152" height="542" alt="ToyTalk demonstration chat interface showing a sheep character and a sample conversation"><figcaption>ToyTalk’s chat interface with a demonstration character and conversation. <a class="link" href="https://arxiv.org/abs/2610.06619">Source: Figure 2 of the ToyTalk paper.</a></figcaption></figure>
 <ol class="learning-path">
-<li><strong>Imagine — Start with a familiar toy</strong><p>Give the toy a name and imagine its role, purpose, and capabilities.</p></li>
-<li><strong>Configure — Shape its character</strong><p>Define its personality, knowledge, and rules through a guided, no-code interface.</p></li>
-<li><strong>Test and revisit — Explore how it responds</strong><p>Talk with the character through text or speech, compare its responses with expectations, and revisit its settings to refine the design.</p></li>
+<li><span class="cycle-title">Imagine</span><strong>Start with a familiar toy</strong><p>Give the toy a name and imagine its role, purpose, and capabilities.</p></li>
+<li><span class="cycle-title">Configure</span><strong>Shape its character</strong><p>Define its personality, knowledge, and rules through a guided, no-code interface.</p></li>
+<li><span class="cycle-title">Test and revisit</span><strong>Explore how it responds</strong><p>Talk with the character through text or speech, compare its responses with expectations, and revisit its settings to refine the design.</p></li>
 </ol>
 <h3>Highlights</h3>
 <ul class="bullets">
