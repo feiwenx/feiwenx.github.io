@@ -14,8 +14,8 @@
   --line: #dfe2e6;            /* thin separators between list rows */
   --shadow: #d5d9de;          /* hard shadow under square boxes */
   --paper: #ffffff;           /* page background */
-  --glow-blue: rgba(0, 153, 253, 0.09);  /* hover glow, blue */
-  --glow-warm: rgba(255, 212, 59, 0.17); /* hover glow, warm yellow (About block) */
+  --glow-blue: rgba(0, 153, 253, 0.09);  /* hover glow, blue (zone) */
+  --glow-warm: rgba(255, 212, 59, 0.17); /* hover glow, warm yellow (zone-right and About), alternates with blue */
   --band: #e6f3fe;            /* research page banner */
   --callout-bg: #e3f1fd;      /* pinned note background (yellow version: #fcecab) */
   --callout-border: #058cf2;  /* pinned note left bar (yellow version: #e2bd3c) */
@@ -48,6 +48,7 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; }
 
 .link { color: var(--accent-text); }
+.nowrap { white-space: nowrap; }
 .link:hover,
 .link:focus-visible {
   text-decoration: underline;
@@ -74,7 +75,8 @@ img { max-width: 100%; }
 
 /* ---------- Hover glow ----------
    Blocks with class="zone" fade in a very light color from the window edge on hover.
-   zone = blue from the left, zone-right = blue from the right, zone-warm = warm yellow from the right.
+   zone = blue from the left, zone-right and zone-warm = warm yellow from the right.
+   Alternating blocks use zone / zone-right, so blue and yellow take turns down the page.
    To turn the effect off, delete the ".zone:hover::before" rule below. */
 
 .zone {
@@ -94,7 +96,7 @@ img { max-width: 100%; }
 }
 
 .zone-right::before {
-  background: radial-gradient(farthest-side at 100% 50%, var(--glow-blue), transparent 100%);
+  background: radial-gradient(farthest-side at 100% 50%, var(--glow-warm), transparent 100%);
 }
 
 .zone-warm::before {
@@ -232,6 +234,7 @@ img { max-width: 100%; }
 }
 
 .bio p { margin: 0; }
+.bio p + p { margin-top: 14px; }
 
 .note {
   margin: 22px 0 0;
@@ -349,6 +352,23 @@ img { max-width: 100%; }
   font-size: 16px;
 }
 
+/* Small highlighted label, e.g. "Best Paper Award" after a publication */
+.badge {
+  display: inline-block;
+  margin-left: 2px;
+  padding: 0 8px;
+  border: 1.5px solid var(--callout-border);
+  border-radius: 2px;
+  background: var(--callout-bg);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  white-space: nowrap;
+  color: var(--accent-text);
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -458,6 +478,193 @@ img { max-width: 100%; }
   color: var(--muted);
 }
 
+.banner .lead + .lead { margin-top: 10px; }
+
+/* Small label above a project title, e.g. "AI literacy" */
+.area {
+  display: block;
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+a.thumb { display: block; }
+
+.project-body h3 a:hover,
+.project-body h3 a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+/* ---------- Project pages (projects/*.html) ---------- */
+
+.crumbs {
+  margin: 0 0 22px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.crumbs a:hover,
+.crumbs a:focus-visible {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-title {
+  margin: 0;
+  font-family: var(--font-hand);
+  font-size: clamp(46px, 6.5vw, 76px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+.hero {
+  max-width: 760px;
+  margin: 30px 0 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #ffffff;
+  border: 2px solid var(--rule);
+  border-radius: 2px;
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The sections span the full column so their hover glow reaches both window edges;
+   their contents stay at a comfortable reading width. */
+.detail .lede,
+.detail section > *,
+.detail .updated { max-width: 760px; }
+
+.detail .lede p {
+  margin: 26px 0 0;
+  font-size: 18.5px;
+  line-height: 1.7;
+}
+
+.detail .lede p + p { margin-top: 14px; }
+
+.detail h2 {
+  margin: 48px 0 12px;
+  padding-left: 2px;
+  font-family: var(--font-hand);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.detail > section > p { margin: 0; }
+
+.bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bullets li {
+  position: relative;
+  margin: 0 0 10px;
+  padding-left: 26px;
+}
+
+/* Small blue square in front of each bullet */
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.66em;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+}
+
+.muted { color: var(--muted); }
+
+/* Sub-heading inside a section, e.g. a sub-project under Highlights */
+.detail h3.sub {
+  margin: 22px 0 10px;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.detail h2 + h3.sub { margin-top: 6px; }
+
+.updated {
+  margin: 40px 0 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* Previous / next project links at the bottom of a project page */
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.pager a {
+  flex: 0 1 340px;
+  display: block;
+  padding: 12px 18px 14px;
+  background: #ffffff;
+  border: 2px solid var(--rule);
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.pager a:hover,
+.pager a:focus-visible {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--accent-shadow);
+  border-color: var(--accent);
+}
+
+.pager .next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.pager .dir {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pager .ttl {
+  display: block;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
 .project-body .mono-links {
   display: block;
   margin-top: 12px;
@@ -468,10 +675,13 @@ img { max-width: 100%; }
   .bar,
   .btn,
   .thumb,
+  .pager a,
   .zone::before { transition: none; }
   .bar:hover,
   .bar:focus-within,
   .btn:hover,
   .btn:focus-visible,
-  .thumb:hover { transform: none; }
+  .thumb:hover,
+  .pager a:hover,
+  .pager a:focus-visible { transform: none; }
 }

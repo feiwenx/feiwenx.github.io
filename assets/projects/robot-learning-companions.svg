@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Illustration: a friendly humanoid robot holding an open picture book in a living room, with a window, a plant, and a speech bubble">
+  <defs>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="2.6" fill="#1d2125" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="#e3f0fd"/>
+  <rect width="1200" height="900" fill="url(#dots)"/>
+  <!-- window -->
+  <g stroke="#1d2125" stroke-width="6" stroke-linejoin="round">
+    <rect x="132" y="122" width="200" height="210" rx="10" fill="#1d2125" fill-opacity="0.12" stroke="none"/>
+    <rect x="120" y="110" width="200" height="210" rx="10" fill="#bfe3ff"/>
+    <circle cx="262" cy="166" r="22" fill="#ffd43b" stroke-width="5"/>
+    <path d="M220 110V320M120 215H320" stroke-width="6"/>
+    <path d="M108 104H332" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <!-- rug -->
+  <ellipse cx="600" cy="806" rx="380" ry="40" fill="#fcecab" stroke="#1d2125" stroke-width="5"/>
+  <ellipse cx="600" cy="806" rx="330" ry="26" fill="none" stroke="#e2bd3c" stroke-width="5" stroke-dasharray="14 12"/>
+  <!-- plant -->
+  <g stroke="#1d2125" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M1000 700 C 960 640 940 600 948 556 C 990 590 1004 640 1000 700 Z" fill="#59c9a5"/>
+    <path d="M1000 700 C 1030 640 1060 610 1090 600 C 1086 650 1050 690 1000 700 Z" fill="#59c9a5"/>
+    <path d="M1000 700 C 990 640 1000 590 1024 556 C 1040 600 1030 650 1000 700 Z" fill="#7fd8b9"/>
+    <path d="M948 700 H 1052 L 1040 790 H 960 Z" fill="#ff8a65"/>
+  </g>
+
+  <g stroke="#1d2125" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <!-- legs -->
+    <rect x="515" y="740" width="54" height="56" rx="10" fill="#8cc8f8" stroke-width="6"/>
+    <rect x="631" y="740" width="54" height="56" rx="10" fill="#8cc8f8" stroke-width="6"/>
+    <!-- body -->
+    <rect x="484" y="532" width="260" height="230" rx="42" fill="#1d2125" fill-opacity="0.14" stroke="none"/>
+    <rect x="470" y="518" width="260" height="230" rx="42" fill="#ffffff"/>
+    <!-- neck -->
+    <rect x="570" y="474" width="60" height="50" rx="8" fill="#8cc8f8" stroke-width="6"/>
+    <!-- antenna -->
+    <path d="M600 252V196"/>
+    <circle cx="600" cy="180" r="20" fill="#ffd43b" stroke-width="6"/>
+    <!-- head -->
+    <rect x="469" y="264" width="290" height="226" rx="62" fill="#1d2125" fill-opacity="0.14" stroke="none"/>
+    <rect x="455" y="250" width="290" height="226" rx="62" fill="#ffffff"/>
+    <rect x="428" y="326" width="32" height="76" rx="14" fill="#058cf2" stroke-width="6"/>
+    <rect x="740" y="326" width="32" height="76" rx="14" fill="#058cf2" stroke-width="6"/>
+    <rect x="495" y="292" width="210" height="142" rx="44" fill="#1d2125"/>
+    <circle cx="560" cy="352" r="20" fill="#8cd3ff" stroke="none"/>
+    <circle cx="640" cy="352" r="20" fill="#8cd3ff" stroke="none"/>
+    <path d="M572 394 Q 600 418 628 394" fill="none" stroke="#8cd3ff" stroke-width="8"/>
+    <circle cx="526" cy="396" r="10" fill="#ff8a65" fill-opacity="0.8" stroke="none"/>
+    <circle cx="674" cy="396" r="10" fill="#ff8a65" fill-opacity="0.8" stroke="none"/>
+
+    <!-- open book -->
+    <path d="M430 602 L600 630 L770 602 L770 722 L600 750 L430 722 Z" fill="#ff8a65" stroke-width="6"/>
+    <path d="M446 592 L600 618 L600 734 L446 708 Z" fill="#ffffff" stroke-width="6"/>
+    <path d="M600 618 L754 592 L754 708 L600 734 Z" fill="#ffffff" stroke-width="6"/>
+  </g>
+  <g stroke="#c4cad1" stroke-width="8" stroke-linecap="round">
+    <path d="M470 630l100 16M470 658l84 14M470 686l100 16"/>
+    <path d="M630 646l100-16M630 674l84-14M630 702l100-16"/>
+  </g>
+  <g stroke-linecap="round" fill="none">
+    <!-- arms: dark outline, then blue fill stroke -->
+    <path d="M478 560 Q 420 600 446 660" stroke="#1d2125" stroke-width="44"/>
+    <path d="M478 560 Q 420 600 446 660" stroke="#8cc8f8" stroke-width="30"/>
+    <path d="M722 560 Q 780 600 754 660" stroke="#1d2125" stroke-width="44"/>
+    <path d="M722 560 Q 780 600 754 660" stroke="#8cc8f8" stroke-width="30"/>
+  </g>
+  <g stroke="#1d2125" stroke-width="6">
+    <circle cx="448" cy="660" r="24" fill="#ffffff"/>
+    <circle cx="752" cy="660" r="24" fill="#ffffff"/>
+  </g>
+
+  <!-- speech bubble -->
+  <g stroke="#1d2125" stroke-width="6" stroke-linejoin="round">
+    <path d="M838 182H1042A40 40 0 0 1 1082 222V286A40 40 0 0 1 1042 326H884L812 372L836 324A40 40 0 0 1 798 286V222A40 40 0 0 1 838 182Z" fill="#1d2125" fill-opacity="0.14" stroke="none" transform="translate(10 10)"/>
+    <path d="M838 182H1042A40 40 0 0 1 1082 222V286A40 40 0 0 1 1042 326H884L812 372L836 324A40 40 0 0 1 798 286V222A40 40 0 0 1 838 182Z" fill="#ffffff"/>
+  </g>
+  <g fill="#058cf2">
+    <circle cx="884" cy="254" r="16"/>
+    <circle cx="940" cy="254" r="16"/>
+    <circle cx="996" cy="254" r="16"/>
+  </g>
+
+  <!-- small book stack -->
+  <g stroke="#1d2125" stroke-width="6" stroke-linejoin="round">
+    <rect x="150" y="732" width="190" height="52" rx="7" fill="#59c9a5"/>
+    <rect x="168" y="680" width="160" height="52" rx="7" fill="#ffd43b"/>
+  </g>
+
+  <!-- sparkles -->
+  <path d="M372 452l10 26 26 10-26 10-10 26-10-26-26-10 26-10z" fill="#ffd43b" stroke="#1d2125" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M1110 456l8 20 20 8-20 8-8 20-8-20-20-8 20-8z" fill="#058cf2"/>
+</svg>
